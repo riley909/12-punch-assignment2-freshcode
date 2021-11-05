@@ -1,5 +1,6 @@
 import { IsEmail, IsString } from 'class-validator'
 import { ApiProperty } from '@nestjs/swagger';
+import { Role } from '../roles.types';
 
 export class CreateUserDto {
 
@@ -12,5 +13,5 @@ export class CreateUserDto {
   password: string
 
   @IsString()
-  role: string;
+  role: any;
 }

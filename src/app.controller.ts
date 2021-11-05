@@ -6,20 +6,4 @@ import { ApiTags, ApiOperation } from '@nestjs/swagger';
 
 @ApiTags('로그인 API')
 @Controller()
-export class AppController {
-  constructor(private authService: AuthService) { }
-
-  @ApiOperation({ summary: '로그인' })
-  @UseGuards(LocalAuthGuard)
-  @Post('auth/login')
-  async login(@Request() req) {
-    return this.authService.login(req.user);
-  }
-
-  @ApiOperation({ summary: '회원 프로필 조회' })
-  @UseGuards(JwtAuthGuard)
-  @Get('profile')
-  getProfile(@Request() req) {
-    return req.user;
-  }
-}
+export class AppController { }
