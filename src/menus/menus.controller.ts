@@ -14,7 +14,7 @@ import { RolesGuard } from 'src/users/guards/roles.guard';
 export class MenusController {
   constructor(private readonly menusService: MenusService) { }
 
-  @ApiOperation({ summary: '상품등록' })
+  @ApiOperation({ summary: '상품 등록' })
   @Roles(Role.Admin)
   @Post()
   create(@Body() createMenuDto: CreateMenuDto) {
