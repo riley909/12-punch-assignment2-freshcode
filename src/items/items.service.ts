@@ -52,7 +52,6 @@ export class ItemsService {
   async remove(id: number) {
     await this.findOne(id);
     const item = await this.itemRepository.delete({ id: id });
-    console.log(item);
     return true;
   }
 }
