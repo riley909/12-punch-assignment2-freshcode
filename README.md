@@ -71,7 +71,11 @@
 - 연관된 Menu 삭제 시 onDelete: 'CASCADE' 옵션으로 같이 삭제됩니다.
 
 ## API TEST 방법
-1. 
+1. 다음 링크로 이동합니다. [postman 링크] https://www.postman.com/restless-escape-500858/workspace/12-punch-assignment/collection/8136495-ee7f1807-8463-467f-af61-6cc5430f8635
+2. user폴더 안의 회원가입, 로그인 요청을 통하여 accessToken을 획득합니다.
+3. 권한이 필요한 api 요청 시 header의 Authorization 항목에 accessToken을 입력하여 요청할 수 있습니다. 
+- menus, items, tag 폴더의 api는 관리자만 전체 요청 가능하고 일반 회원은 리스트 조회와 단건 조회만 가능합니다.
+- 로그인, 회원가입을 제외한 user폴더 내의 api는 테스트 용도로, 별도의 접근 권한 제한을 두지 않았습니다.
 
 ## 설치 및 실행 방법
 
