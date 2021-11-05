@@ -9,5 +9,5 @@ export class CreateTagDto {
   @IsString()
   readonly type: string; //TagType;
   @IsString()
-  readonly menu: string; //Menu;
+  readonly name: string; //Menu;
 }

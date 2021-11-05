@@ -11,8 +11,4 @@ export class CreateMenuDto {
   readonly isSold: boolean;
   @IsString()
   readonly badge: string;
-  @IsString() // ({each: true}) => []일때 모든 값의 타입이 맞는지 확인
-  readonly items: string; //Item[];
-  @IsString()
-  readonly tags: string; //Tag[];
 }
