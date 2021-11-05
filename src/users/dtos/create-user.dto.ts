@@ -1,14 +1,16 @@
 import { IsEmail, IsString } from 'class-validator'
-import { Role } from '../roles.types';
+import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateUserDto {
 
   @IsEmail()
+  @ApiProperty()
   email: string
 
   @IsString()
+  @ApiProperty()
   password: string
 
   @IsString()
-  role: Role;
+  role: string;
 }
