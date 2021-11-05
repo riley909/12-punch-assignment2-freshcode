@@ -76,15 +76,6 @@
 ## 설치 및 실행 방법
 
 
-## TIL정리 (Blog)
-- 김남형 :
-- 김서경 :
-- 김요셉 :
-- 정천우 : [codehousepig](https://blog.naver.com/codehouse9/222559886750)
-- 최유진 :
-
-# Reference
-이 프로젝트는 원티드x위코드 백엔드 프리온보딩 과제 일환으로 FRESHCODE에서 출제한 과제를 기반으로 만들었습니다.
 
 ## Installation
 
@@ -116,7 +107,7 @@ $ npm run test
 - 김남형 :
 - 김서경 :
 - 김요셉 :
-- 정천우 :
+- 정천우 : [codehousepig](https://blog.naver.com/codehouse9/222559886750)
 - 최유진 :
 
 # Reference
