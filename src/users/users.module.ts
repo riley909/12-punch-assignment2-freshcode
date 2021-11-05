@@ -11,11 +11,8 @@ import { APP_GUARD } from '@nestjs/core';
   imports: [
     TypeOrmModule.forFeature([Users, UsersRepository]),
   ],
-  providers: [
-    UsersService,
-    // RolesGuard,
-  ],
+  providers: [UsersService],
   exports: [UsersService],
-  controllers: [UsersController]
+  controllers: [UsersController],
 })
-export class UsersModule { }
+export class UsersModule {}

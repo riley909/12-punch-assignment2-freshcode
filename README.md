@@ -38,7 +38,7 @@
 
 
 ## 사용 기술 및 tools
-> - Back-End :  ![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white), ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white), ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+> - Back-End :  ![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 > - Deploy : <img src="https://img.shields.io/badge/AWS_EC2-232F3E?style=for-the-badge&logo=Amazon&logoColor=white"/>
 > - ETC :  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white"/>&nbsp;<img src="https://img.shields.io/badge/Github-181717?style=for-the-badge&logo=Github&logoColor=white"/>&nbsp;<img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white"/>
 
@@ -74,24 +74,9 @@
 
 ## 설치 및 실행 방법
 
-
-## TIL정리 (Blog)
-- 김남형 :
-- 김서경 :
-- 김요셉 :
-- 정천우 :
-- 최유진 :
-
-# Reference
-이 프로젝트는 원티드x위코드 백엔드 프리온보딩 과제 일환으로 FRESHCODE에서 출제한 과제를 기반으로 만들었습니다.
-
-## Installation
-
 ```bash
 $ npm install
 ```
-
-## Running the app
 
 ```bash
 # development
@@ -104,15 +89,22 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+## 테스팅 방법
 
 ```bash
 # unit tests
 $ npm run test
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
 ```
+
+## TIL정리 (Blog)
+- 김남형 :
+- 김서경 :
+- 김요셉 :
+- 정천우 :
+- 최유진 :
+
+# Reference
+이 프로젝트는 원티드x위코드 백엔드 프리온보딩 과제 일환으로 FRESHCODE에서 출제한 과제를 기반으로 만들었습니다.
+
+
