@@ -24,11 +24,12 @@ export class MenusService {
   }
 
   async findAll(query): Promise<Menu[]> {
-    const limit = query.limit || 10;
+    const limit = query.limit || 5;
     const offset = query.offset || 1;
-    console.log(limit);
-    console.log(offset);
-    return await this.menuRepository.find();
+    return await this.menuRepository.find({
+      take: limit,
+      skip: limit * (offset - 1),
+    });
   }
 
   async findOne(id: number): Promise<Menu> {
