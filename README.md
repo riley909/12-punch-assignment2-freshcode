@@ -11,7 +11,7 @@
 |김남형 |[x](https://github.com/)   | Unit Testing   |
 |김서경 |[riley909](https://github.com/riley909) | Deployment   |
 |김요셉 |[kim-jos](https://github.com/kim-jos)     | 회원가입, 로그인, user CRUD   |
-|정천우 |[x](https://github.com/)   | Item Tag Menu CRUD, DB Modeling   |
+|정천우 |[codehousepig](https://github.com/codehousepig)   | Menu, Item, Tag CRUD, DB Modeling   |
 |최유진 |[x](https://github.com/) | DB Modeling, postman api 작성   |
 
 
@@ -60,19 +60,34 @@
 - 회원가입시 password 같은 민감정보는 해쉬 알고리즘인 bcrypt를 사용해 암호화 하여 database에 저장했습니다
 - 로그인이 성공적으로 완료되면 JWT 토큰이 반환됩니다
 
-### 게시글 CRUD
-- xxx
+### 상품 CRUD
+- 조회는 누구나 가능하며, 로그인 이후(header에 token이 있는 상태) 권한을 검사하여 관리자("role":"admin")는 상품 추가/수정/삭제를 할 수 있습니다.
+- pagination이 가능하도록 구현하였습니다. 기본 상품 조회 수는 5개이며, limit=상품개수 로 한 페이지당 조회되는 개수를 조절할 수 있습니다.
+- 상품 등록시 ValidationPipe() 를 이용하여 forbidNonWhitelisted: true 옵션으로 entity 의 없는 값을 사전에 차단합니다.
 
-### 댓글 대댓글 CRUD
-- xxx
-
-### Docker
-- xxx
+### 아이템, 태그 CRUD
+- Item, Tag 각각 조회는 가능하지만, 추가/수정/삭제는 관리자만이 할 수 있습니다.
+- Menu 와 @ManyToOne 으로 관계를 맺고 있어 따로 조회를 하지 않아도 해당 메뉴와 같이 조회됩니다.
+- 연관된 Menu 삭제 시 onDelete: 'CASCADE' 옵션으로 같이 삭제됩니다.
 
 ## API TEST 방법
 1. 
 
 ## 설치 및 실행 방법
+
+
+## TIL정리 (Blog)
+- 김남형 :
+- 김서경 :
+- 김요셉 :
+- 정천우 : [codehousepig](https://blog.naver.com/codehouse9/222559886750)
+- 최유진 :
+
+# Reference
+이 프로젝트는 원티드x위코드 백엔드 프리온보딩 과제 일환으로 FRESHCODE에서 출제한 과제를 기반으로 만들었습니다.
+
+## Installation
+
 
 ```bash
 $ npm install
