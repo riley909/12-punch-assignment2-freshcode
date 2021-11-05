@@ -12,7 +12,7 @@
 |김서경 |[riley909](https://github.com/riley909) | Deployment   |
 |김요셉 |[kim-jos](https://github.com/kim-jos)     | 회원가입, 로그인, user CRUD   |
 |정천우 |[codehousepig](https://github.com/codehousepig)   | Menu, Item, Tag CRUD, DB Modeling   |
-|최유진 |[x](https://github.com/) | DB Modeling, postman api 작성   |
+|최유진 |[n12seconds](https://github.com/n12seconds) | DB Modeling, postman api 작성   |
 
 
 ## 과제 내용
