@@ -8,7 +8,7 @@
 ## Members
 |이름   |github                   |담당 기능|
 |-------|-------------------------|--------------------|
-|김남형 |[x](https://github.com/)   | Unit Testing   |
+|김남형 |[42seouler](https://github.com/)   | Unit Testing   |
 |김서경 |[riley909](https://github.com/riley909) | Deployment   |
 |김요셉 |[kim-jos](https://github.com/kim-jos)     | 회원가입, 로그인, user CRUD   |
 |정천우 |[codehousepig](https://github.com/codehousepig)   | Menu, Item, Tag CRUD, DB Modeling   |
@@ -110,7 +110,7 @@ $ npm run test
 ## TIL정리 (Blog)
 - 김남형 :
 - 김서경 :
-- 김요셉 :
+- 김요셉 : [controller-unit-test](https://velog.io/@42seouler/NestJS-TDD-UnitTest)
 - 정천우 : [codehousepig](https://blog.naver.com/codehouse9/222559886750)
 - 최유진 :
 
