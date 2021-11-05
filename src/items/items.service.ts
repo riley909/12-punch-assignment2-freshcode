@@ -28,7 +28,7 @@ export class ItemsService {
   async findOne(id: number): Promise<Item> {
     const item = await this.itemRepository.findOne({ id: id });
     if (!item) {
-      throw new NotFoundException(`Menu with ID: ${id} not found`);
+      throw new NotFoundException(`Item with ID: ${id} not found`);
     }
     return item;
   }

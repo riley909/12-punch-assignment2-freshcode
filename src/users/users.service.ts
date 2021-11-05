@@ -46,9 +46,10 @@ export class UsersService {
     if (user) throw new BadRequestException('Email already in use');
 
     const hashedPassword = await bcrypt.hash(createUserDto.password, 10);
+
     const newUser = this.repo.create({
-      password: hashedPassword,
       ...createUserDto,
+      password: hashedPassword,
     });
 
     return this.repo.save(newUser);
@@ -57,6 +58,11 @@ export class UsersService {
   async update(id: string, attrs: Partial<Users>) {
     const user = await this.findOne(id);
     if (!user) throw new NotFoundException('User not found');
+
+    if(attrs.password){
+      const hashedPassword = await bcrypt.hash(attrs.password, 10);
+      attrs.password = hashedPassword;
+    }  
 
     Object.assign(user, attrs);
     // Using save instead of update to make use of hooks
