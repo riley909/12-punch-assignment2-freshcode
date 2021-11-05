@@ -1,4 +1,4 @@
-import { PartialType } from '@nestjs/mapped-types';
+import { PartialType } from '@nestjs/swagger';
 import { CreateMenuDto } from './create-menu.dto';
 import { IsBoolean, IsString } from 'class-validator';
 
