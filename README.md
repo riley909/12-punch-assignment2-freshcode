@@ -68,24 +68,9 @@
 
 ## 설치 및 실행 방법
 
-
-## TIL정리 (Blog)
-- 김남형 :
-- 김서경 :
-- 김요셉 :
-- 정천우 :
-- 최유진 :
-
-# Reference
-이 프로젝트는 원티드x위코드 백엔드 프리온보딩 과제 일환으로 FRESHCODE에서 출제한 과제를 기반으로 만들었습니다.
-
-## Installation
-
 ```bash
 $ npm install
 ```
-
-## Running the app
 
 ```bash
 # development
@@ -98,15 +83,22 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+## 테스팅 방법
 
 ```bash
 # unit tests
 $ npm run test
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
 ```
+
+## TIL정리 (Blog)
+- 김남형 :
+- 김서경 :
+- 김요셉 :
+- 정천우 :
+- 최유진 :
+
+# Reference
+이 프로젝트는 원티드x위코드 백엔드 프리온보딩 과제 일환으로 FRESHCODE에서 출제한 과제를 기반으로 만들었습니다.
+
+
