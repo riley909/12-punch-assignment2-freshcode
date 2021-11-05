@@ -14,7 +14,7 @@ async function bootstrap() {
   );
 
   const options = new DocumentBuilder()
-  .setTitle('12-punch-assignment1-AIMMO')
+  .setTitle('12-punch-assignment2-freshcode')
   .setDescription('board application')
   .setVersion('1.0')
   .build();
