@@ -1,4 +1,5 @@
 
+import { Exclude } from 'class-transformer';
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 import { Role } from './roles.types';
 
@@ -11,8 +12,9 @@ export class Users {
   email: string;
 
   @Column()
+  @Exclude()
   password: string;
 
   @Column()
-  role: Role[];
+  role: Role;
 }

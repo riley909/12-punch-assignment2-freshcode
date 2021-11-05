@@ -4,16 +4,21 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Users } from './users.entity';
 import * as bcrypt from 'bcrypt';
+import { UsersRepository } from './users.repository';
 
 @Injectable()
 export class UsersService {
+
   constructor(
     @InjectRepository(Users)
-    private repo: Repository<Users>
+    private repo: Repository<Users>,
+
+    @InjectRepository(UsersRepository)
+    private usersCustomRepo: UsersRepository
   ) { }
 
-  findAll(@Query('email') email: string) {
-    return this.repo.find({ email });
+  findAll() {
+    return this.repo.find();
   }
 
   async findOne(id: string) {
@@ -21,17 +26,27 @@ export class UsersService {
     if (!user) throw new NotFoundException(`User #${id} not found`);
     return user;
   }
+  async findOneQuery(id: string) {
+    const user = await this.usersCustomRepo.findOne(id)
+    if (!user) throw new NotFoundException(`User #${id} not found`);
+    return user;
+  }
+  async findByEmail(email: string) {
+    const user = await this.repo.findOne({ email })
+    if (!user) throw new NotFoundException(`User with #${email} was not found`);
+    return user;
+  }
 
   async create(createUserDto: CreateUserDto) {
-    const user = await this.findOne(createUserDto.email);
-    if (user) {
-      throw new BadRequestException('중복 된 사용자 아이디입니다.');
-    }
+    const user = await this.repo.findOne(createUserDto.email)
+    if (user) throw new BadRequestException('Email already in use');
+
     const hashedPassword = await bcrypt.hash(createUserDto.password, 10);
     const newUser = this.repo.create({
       ...createUserDto,
       password: hashedPassword,
     });
+
     return this.repo.save(newUser);
   }
 
