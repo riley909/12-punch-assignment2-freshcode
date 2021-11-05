@@ -1,18 +1,28 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards, Query } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  UseGuards,
+  Query,
+} from '@nestjs/common';
 import { MenusService } from './menus.service';
 import { CreateMenuDto } from './dto/create-menu.dto';
 import { UpdateMenuDto } from './dto/update-menu.dto';
 import { ApiTags, ApiOperation } from '@nestjs/swagger';
-import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
-import { Roles } from 'src/users/decorators/roles.decorator';
-import { Role } from 'src/users/roles.types';
-import { RolesGuard } from 'src/users/guards/roles.guard';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
+import { Role } from '../users/roles.types';
+import { Roles } from '../users/decorators/roles.decorator';
+import { RolesGuard } from '../users/guards/roles.guard';
 
 @ApiTags('상품 API')
 @UseGuards(JwtAuthGuard, RolesGuard)
 @Controller('menus')
 export class MenusController {
-  constructor(private readonly menusService: MenusService) { }
+  constructor(private readonly menusService: MenusService) {}
 
   @ApiOperation({ summary: '상품 등록' })
   @Roles(Role.Admin)
