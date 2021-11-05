@@ -15,6 +15,6 @@ export class Users {
   @Exclude()
   password: string;
 
-  @Column()
+  @Column({ type: 'enum', enum: Role, default: Role.User })
   role: Role;
 }

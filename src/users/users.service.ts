@@ -38,7 +38,7 @@ export class UsersService {
   }
 
   async create(createUserDto: CreateUserDto) {
-    const user = await this.repo.findOne(createUserDto.email)
+    const user = await this.repo.findOne({ email: createUserDto.email })
     if (user) throw new BadRequestException('Email already in use');
 
     const hashedPassword = await bcrypt.hash(createUserDto.password, 10);

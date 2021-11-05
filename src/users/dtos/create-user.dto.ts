@@ -1,5 +1,5 @@
 import { IsEmail, IsString } from 'class-validator'
-
+import { Role } from '../roles.types';
 
 export class CreateUserDto {
 
@@ -8,4 +8,7 @@ export class CreateUserDto {
 
   @IsString()
   password: string
+
+  @IsString()
+  role: Role;
 }
