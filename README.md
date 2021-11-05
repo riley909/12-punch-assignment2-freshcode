@@ -1,4 +1,4 @@
-# Assignment 2
+# [Assignment 2] 프레시코드
 원티드x위코드 백엔드 프리온보딩 과제2
 - 과제 출제 기업 정보
   - 기업명 : 프레시코드
@@ -9,7 +9,7 @@
 |이름   |github                   |담당 기능|
 |-------|-------------------------|--------------------|
 |김남형 |[x](https://github.com/)   | Unit Testing   |
-|김서경 |[x](https://github.com/) | Deployment   |
+|김서경 |[riley909](https://github.com/riley909) | Deployment   |
 |김요셉 |[kim-jos](https://github.com/kim-jos)     | 회원가입, 로그인, user CRUD   |
 |정천우 |[x](https://github.com/)   | Item Tag Menu CRUD, DB Modeling   |
 |최유진 |[x](https://github.com/) | DB Modeling, postman api 작성   |
@@ -42,8 +42,14 @@
 > - Deploy : <img src="https://img.shields.io/badge/AWS_EC2-232F3E?style=for-the-badge&logo=Amazon&logoColor=white"/>
 > - ETC :  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white"/>&nbsp;<img src="https://img.shields.io/badge/Github-181717?style=for-the-badge&logo=Github&logoColor=white"/>&nbsp;<img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white"/>
 
-## 모델링
+<img src="https://user-images.githubusercontent.com/67426853/140548155-35f16e86-6aba-4930-8f1a-2dff079d182d.png" width=600/>
+
+
+## DB Schema
 ![freshcode](https://user-images.githubusercontent.com/77760709/140546589-326dc80f-b368-4297-ac03-50ccf23dab14.png)
+
+## AWS Architecture
+<img src="https://user-images.githubusercontent.com/67426853/140548110-87c2dddd-fe42-40cb-8562-f651bb5c3f2c.png" width=600>
 
 ## API
 [링크-postman document]()
