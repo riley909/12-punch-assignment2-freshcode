@@ -108,9 +108,9 @@ $ npm run test
 ```
 
 ## TIL정리 (Blog)
-- 김남형 :
+- 김남형 : [controller-unit-test](https://velog.io/@42seouler/NestJS-TDD-UnitTest)
 - 김서경 :
-- 김요셉 : [controller-unit-test](https://velog.io/@42seouler/NestJS-TDD-UnitTest)
+- 김요셉 : 
 - 정천우 : [codehousepig](https://blog.naver.com/codehouse9/222559886750)
 - 최유진 :
 
