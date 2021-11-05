@@ -1,0 +1,61 @@
+
+###create new user
+POST http://localhost:3000/users
+Content-Type: application/json 
+
+{
+    "email": "test@test.com",
+    "password": "test",
+    "role": "admin"
+}
+### Login
+POST http://localhost:3000/auth/login
+Content-Type: application/json 
+
+{
+    "email": "test@test.com",
+    "password": "test",
+    "role": "admin"
+}
+
+### WhoAmI
+GET  http://localhost:3000/auth/profile
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJwYXNzd29yZCI6InRlc3QiLCJyb2xlIjoiYWRtaW4iLCJpZCI6NiwiaWF0IjoxNjM2MTIzODU1LCJleHAiOjE2MzYxMjQ0NTV9.VydThCeDL3Y78JWcP_cX0KveehdrMaK8SmTdHpO-euQ
+
+
+
+
+
+
+### Make Menu
+POST http://localhost:3000/menus
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJwYXNzd29yZCI6InRlc3QiLCJyb2xlIjoiYWRtaW4iLCJpZCI6NiwiaWF0IjoxNjM2MTI0NTYyLCJleHAiOjE2MzYxMjUxNjJ9.3r_6sK0bBOUvdJAf-V99oY1hcLmDjZgX1KLkFwHJAkg
+
+{
+    "category":"SALAD",
+    "name":"깔라마리 달래 샐러드",
+    "description":"해산물 샐러드",
+    "isSold":false,
+    "badge":"NEW",
+}
+
+### Get Menu
+GET http://localhost:3000/menus
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJwYXNzd29yZCI6InRlc3QiLCJyb2xlIjoiYWRtaW4iLCJpZCI6NiwiaWF0IjoxNjM2MTI0NTYyLCJleHAiOjE2MzYxMjUxNjJ9.3r_6sK0bBOUvdJAf-V99oY1hcLmDjZgX1KLkFwHJAkg
+
+### Delete Menu
+DELETE http://localhost:3000/menus/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJwYXNzd29yZCI6InRlc3QiLCJyb2xlIjoiYWRtaW4iLCJpZCI6NiwiaWF0IjoxNjM2MTIzODU1LCJleHAiOjE2MzYxMjQ0NTV9.VydThCeDL3Y78JWcP_cX0KveehdrMaK8SmTdHpO-euQ
+
+### Update Menu
+PATCH http://localhost:3000/menus/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJwYXNzd29yZCI6InRlc3QiLCJyb2xlIjoiYWRtaW4iLCJpZCI6NiwiaWF0IjoxNjM2MTIzODU1LCJleHAiOjE2MzYxMjQ0NTV9.VydThCeDL3Y78JWcP_cX0KveehdrMaK8SmTdHpO-euQ
+
+{
+    "category":"Burger",
+}

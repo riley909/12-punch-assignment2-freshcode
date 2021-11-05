@@ -15,7 +15,6 @@ export class UsersController {
 
     constructor(private readonly usersService: UsersService) { }
 
-
     @Roles(Role.Admin)
     @UseGuards(JwtAuthGuard, RolesGuard)
     @ApiOperation({ summary: '회원 리스트 조회' })
@@ -32,7 +31,7 @@ export class UsersController {
 
     @ApiOperation({ summary: '회원 가입' })
     @Post()
-    create(@Body() createUserDto: CreateUserDto,) {
+    create(@Body() createUserDto: CreateUserDto) {
         return this.usersService.create(createUserDto);
     }
 
