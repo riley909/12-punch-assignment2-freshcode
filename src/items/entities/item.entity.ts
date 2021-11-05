@@ -1,7 +1,7 @@
-import { Menu } from 'src/menus/menu.entity';
+import { Menu } from 'src/menus/entities/menu.entity';
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
-import { ItemName } from './enums/item-name.enum';
-import { ItemSize } from './enums/item-size.enum';
+import { ItemName } from '../enums/item-name.enum';
+import { ItemSize } from '../enums/item-size.enum';
 
 @Entity()
 export class Item {
@@ -12,10 +12,10 @@ export class Item {
   menuId: number;
 
   @Column()
-  name: ItemName;
+  name: string; //ItemName;
 
   @Column()
-  size: ItemSize;
+  size: string; //ItemSize;
 
   @Column()
   price: number;
@@ -24,5 +24,5 @@ export class Item {
   isSold: boolean;
 
   @ManyToOne((_type) => Menu, (menu) => menu.items, { eager: false })
-  menu: Menu;
+  menu: string; //Menu;
 }
