@@ -2,6 +2,7 @@ import { ItemName } from '../enums/item-name.enum';
 import { ItemSize } from '../enums/item-size.enum';
 import { Menu } from '../../menus/entities/menu.entity';
 import { IsBoolean, IsNumber, IsString } from 'class-validator';
+import { ManyToOne } from 'typeorm';
 
 export class CreateItemDto {
   @IsNumber()
@@ -14,6 +15,4 @@ export class CreateItemDto {
   readonly price: number;
   @IsBoolean()
   readonly isSold: boolean;
-  @IsString()
-  readonly menu: string; //Menu;
 }

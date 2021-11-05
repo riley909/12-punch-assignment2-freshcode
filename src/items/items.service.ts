@@ -2,40 +2,57 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateItemDto } from './dto/create-item.dto';
 import { UpdateItemDto } from './dto/update-item.dto';
 import { Item } from './entities/item.entity';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
 
 @Injectable()
 export class ItemsService {
-  private items: Item[] = [];
-  create(createItemDto: CreateItemDto) {
-    this.items.push({
-      id: this.items.length + 1,
-      ...createItemDto,
-    });
-    return 'This action adds a new item';
+  constructor(
+    @InjectRepository(Item)
+    private readonly itemRepository: Repository<Item>,
+  ) {}
+
+  async create(createItemDto: CreateItemDto) {
+    const item = this.itemRepository.save(createItemDto);
+    return item;
   }
 
-  findAll(): Item[] {
-    return this.items;
+  async findAll(query): Promise<Item[]> {
+    const limit = query.limit || 5;
+    const offset = query.offset || 1;
+    console.log(limit);
+    console.log(offset);
+    return await this.itemRepository.find();
   }
 
-  findOne(id: number): Item {
-    const item = this.items.find((item) => item.id === id);
+  async findOne(id: number): Promise<Item> {
+    const item = await this.itemRepository.findOne({ id: id });
     if (!item) {
-      throw new NotFoundException(`Item with ID: ${id} not found`);
+      throw new NotFoundException(`Menu with ID: ${id} not found`);
     }
     return item;
   }
 
-  update(id: number, updateItemDto: UpdateItemDto) {
-    const item = this.findOne(id);
-    this.remove(id);
-    this.items.push({ ...item, ...UpdateItemDto });
+  async update(id: number, updateItemDto: UpdateItemDto) {
+    const item = await this.findOne(id);
+    console.log(updateItemDto);
+    const dto = {
+      id: id,
+      menuId: updateItemDto.menuId || item.menuId,
+      name: updateItemDto.name || item.name,
+      size: updateItemDto.size || item.size,
+      price: updateItemDto.price || item.price,
+      isSold: updateItemDto.isSold || item.isSold,
+    };
+    await this.remove(id);
+    await this.create(dto);
     return `This action updates a #${id} item`;
   }
 
-  remove(id: number) {
-    this.findOne(id);
-    this.items = this.items.filter((item) => item.id !== id);
+  async remove(id: number) {
+    await this.findOne(id);
+    const item = await this.itemRepository.delete({ id: id });
+    console.log(item);
     return true;
   }
 }

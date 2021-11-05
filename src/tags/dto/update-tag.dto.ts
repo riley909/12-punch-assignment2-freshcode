@@ -8,5 +8,5 @@ export class UpdateTagDto extends PartialType(CreateTagDto) {
   @IsString()
   readonly type?: string; //TagType;
   @IsString()
-  readonly menu?: string; //Menu;
+  readonly name?: string; //Menu;
 }

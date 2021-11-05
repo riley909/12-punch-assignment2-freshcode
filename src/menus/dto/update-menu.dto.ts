@@ -13,8 +13,4 @@ export class UpdateMenuDto extends PartialType(CreateMenuDto) {
   readonly isSold?: boolean;
   @IsString()
   readonly badge?: string;
-  @IsString() // ({each: true})
-  readonly items?: string; //Item[];
-  @IsString()
-  readonly tags?: string; //Tag[];
 }

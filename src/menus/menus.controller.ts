@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Query } from '@nestjs/common';
 import { MenusService } from './menus.service';
 import { CreateMenuDto } from './dto/create-menu.dto';
 import { UpdateMenuDto } from './dto/update-menu.dto';
@@ -17,8 +17,9 @@ export class MenusController {
 
   @ApiOperation({ summary: '상품 리스트 조회' })
   @Get()
-  findAll() {
-    return this.menusService.findAll();
+  findAll(@Query() query) {
+    return this.menusService.findAll(query);
+
   }
 
   // 비교를 위한 main.ts의 ValidationPipe() 의 transform: true 하기전 코드

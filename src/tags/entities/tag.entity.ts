@@ -1,6 +1,5 @@
-import { Menu } from 'src/menus/entities/menu.entity';
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
-import { TagType } from '../enums/tag-type.enum';
+import { Menu } from '../../menus/entities/menu.entity';
 
 @Entity()
 export class Tag {
@@ -13,6 +12,9 @@ export class Tag {
   @Column()
   type: string; //TagType;
 
-  @ManyToOne((_type) => Menu, (menu) => menu.items, { eager: false })
-  menu: string; //Menu;
+  @Column()
+  name: string; //ItemName;
+
+  @ManyToOne((_type) => Menu, (menu) => menu.tags, { eager: false })
+  menu: Menu;
 }
