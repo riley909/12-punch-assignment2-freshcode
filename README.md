@@ -42,14 +42,14 @@
 > - Deploy : <img src="https://img.shields.io/badge/AWS_EC2-232F3E?style=for-the-badge&logo=Amazon&logoColor=white"/>
 > - ETC :  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white"/>&nbsp;<img src="https://img.shields.io/badge/Github-181717?style=for-the-badge&logo=Github&logoColor=white"/>&nbsp;<img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white"/>
 
-<img src="https://user-images.githubusercontent.com/67426853/140548155-35f16e86-6aba-4930-8f1a-2dff079d182d.png" width=600/>
+<img src="https://user-images.githubusercontent.com/67426853/140548155-35f16e86-6aba-4930-8f1a-2dff079d182d.png" width=700/>
 
 
 ## DB Schema
-![freshcode](https://user-images.githubusercontent.com/77760709/140546589-326dc80f-b368-4297-ac03-50ccf23dab14.png)
+<img src="https://user-images.githubusercontent.com/77760709/140546589-326dc80f-b368-4297-ac03-50ccf23dab14.png" width=700>
 
 ## AWS Architecture
-<img src="https://user-images.githubusercontent.com/67426853/140548110-87c2dddd-fe42-40cb-8562-f651bb5c3f2c.png" width=600>
+<img src="https://user-images.githubusercontent.com/67426853/140548110-87c2dddd-fe42-40cb-8562-f651bb5c3f2c.png" width=700>
 
 ## API
 [링크-postman document](https://documenter.getpostman.com/view/8136495/UVC2J9cG)
