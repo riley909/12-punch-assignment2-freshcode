@@ -15,6 +15,6 @@ export class Tag {
   @Column()
   name: string; //ItemName;
 
-  @ManyToOne((_type) => Menu, (menu) => menu.tags, { eager: false })
+  @ManyToOne((_type) => Menu, (menu) => menu.tags, { eager: false, onDelete: 'CASCADE'  })
   menu: Menu;
 }
