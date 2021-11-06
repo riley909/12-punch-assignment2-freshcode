@@ -109,7 +109,7 @@ $ npm run test
 
 ## TIL정리 (Blog)
 - 김남형 : [controller-unit-test](https://velog.io/@42seouler/NestJS-TDD-UnitTest)
-- 김서경 :
+- 김서경 : [프레시코드 기술과제 회고](https://yummy-error-929.notion.site/Pre-Onboarding-d79bdb7a88104e429a50b67916372f29)
 - 김요셉 : 
 - 정천우 : [codehousepig](https://blog.naver.com/codehouse9/222559886750)
 - 최유진 :
