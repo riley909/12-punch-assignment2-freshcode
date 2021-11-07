@@ -110,7 +110,7 @@ $ npm run test
 ## TIL정리 (Blog)
 - 김남형 : [controller-unit-test](https://velog.io/@42seouler/NestJS-TDD-UnitTest)
 - 김서경 : [프레시코드 기술과제 회고](https://yummy-error-929.notion.site/Pre-Onboarding-d79bdb7a88104e429a50b67916372f29)
-- 김요셉 : [Authentication & Authorization](https://dev.to/jokim/authenticationjwt-authorization-23g6-temp-slug-2367294?preview=a573809ca023d315e875704a0812784277d329f116503d51b53a1de7738753cb2b54f60e49db014d96451dc7d927f7fca825c6fbef7b4728941957a5)
+- 김요셉 : [Authentication & Authorization](https://dev.to/jokim/authenticationjwt-authorization-b48)
 - 정천우 : [codehousepig](https://blog.naver.com/codehouse9/222559886750)
 - 최유진 :
 
