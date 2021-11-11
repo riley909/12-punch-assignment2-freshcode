@@ -112,7 +112,7 @@ $ npm run test
 - 김서경 : [프레시코드 기술과제 회고](https://yummy-error-929.notion.site/Pre-Onboarding-d79bdb7a88104e429a50b67916372f29)
 - 김요셉 : [Authentication & Authorization](https://dev.to/jokim/authenticationjwt-authorization-b48)
 - 정천우 : [codehousepig](https://blog.naver.com/codehouse9/222559886750)
-- 최유진 :
+- 최유진 : [become-clear](https://become-clear.tistory.com/86)
 
 # Reference
 이 프로젝트는 원티드x위코드 백엔드 프리온보딩 과제 일환으로 FRESHCODE에서 출제한 과제를 기반으로 만들었습니다.
